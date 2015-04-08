@@ -1074,11 +1074,11 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 
 - (CGRect)frameForDoneButtonAtOrientation:(UIInterfaceOrientation)orientation {
     CGRect screenBound = self.view.bounds;
-//    CGFloat screenWidth = screenBound.size.width;
+    CGFloat screenWidth = screenBound.size.width;
     
     // if ([self isLandscape:orientation]) screenWidth = screenBound.size.height;
     
-    return CGRectMake(10, 5, 40, 40);
+    return CGRectMake(screenWidth -10 -40, 5, 40, 40);
 }
 
 - (CGRect)frameForCaptionView:(IDMCaptionView *)captionView atIndex:(NSUInteger)index {
