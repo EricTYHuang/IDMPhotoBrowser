@@ -619,18 +619,17 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
                                                                                       action:@selector(gotoNextPage)]];
     
     // Counter Label
-    _counterLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 95, 40)];
+    _counterLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 50, 20)];
     _counterLabel.textAlignment = NSTextAlignmentCenter;
-    _counterLabel.backgroundColor = [UIColor clearColor];
-    _counterLabel.font = [UIFont fontWithName:@"Helvetica" size:17];
+    _counterLabel.backgroundColor = [UIColor colorWithHue:0 saturation:0 brightness:0 alpha:0.7];
+    _counterLabel.font = [UIFont fontWithName:@"Helvetica" size:12];
+    _counterLabel.layer.cornerRadius = 10;
+    _counterLabel.clipsToBounds = YES;
+    _counterLabel.textColor = [UIColor whiteColor];
     
     if(_useWhiteBackgroundColor == NO) {
-        _counterLabel.textColor = [UIColor whiteColor];
         _counterLabel.shadowColor = [UIColor darkTextColor];
         _counterLabel.shadowOffset = CGSizeMake(0, 1);
-    }
-    else {
-        _counterLabel.textColor = [UIColor blackColor];
     }
     
     // Counter Button
