@@ -1130,6 +1130,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 		_counterLabel.text = [NSString stringWithFormat:@"%lu %@ %lu", (unsigned long)(_currentPageIndex+1), IDMPhotoBrowserLocalizedStrings(@"/"), (unsigned long)[self numberOfPhotos]];
 	} else {
 		_counterLabel.text = nil;
+        _counterLabel.hidden = YES;
 	}
     
 	// Buttons
