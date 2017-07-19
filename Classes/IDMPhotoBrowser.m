@@ -536,7 +536,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
     [button setImage:selectedImage forState:UIControlStateDisabled];
     [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     [button setContentMode:UIViewContentModeCenter];
-    [button setFrame:[self getToolbarButtonFrame:image]];
+    [button setFrame:CGRectMake(0,0, 44, 44)];
     return button;
 }
 
@@ -619,7 +619,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
     }
     else {
         [_doneButton setImage:_doneButtonImage forState:UIControlStateNormal];
-        _doneButton.contentMode = UIViewContentModeScaleAspectFit;
+        _doneButton.contentMode = UIViewContentModeCenter;
     }
 
     UIImage *leftButtonImage = (_leftArrowImage == nil) ?
@@ -1124,7 +1124,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
     CGFloat screenWidth = screenBound.size.width;
 
     // if ([self isLandscape:orientation]) screenWidth = screenBound.size.height;
-    return CGRectMake(screenWidth -10 -44, 20, 44, 44);
+    return CGRectMake(screenWidth -10 -44, 20, 52, 44);
 }
 
 - (CGRect)frameForCaptionView:(IDMCaptionView *)captionView atIndex:(NSUInteger)index {
